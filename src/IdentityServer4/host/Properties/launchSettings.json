@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "Host": {
+      "applicationUrl": "http://localhost:5001;https://localhost:5000",
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "launchBrowser": true
+    },
+    "Host (proxy)": {
+      "applicationUrl": "http://localhost:5001;https://localhost:5000",
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "launchBrowser": true,
+      "launchUrl": "https://identityserver.local"
+    }
+  }
+}
