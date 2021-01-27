@@ -23,6 +23,7 @@
     <!--<PackageReference Include="IdentityServer4.EntityFramework" />-->
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="All" />
     <PackageReference Include="System.Security.Principal.Windows" />
+    <ProjectReference Include="..\..\AspNetIdentity\src\IdentityServer4.AspNetIdentity.csproj" />
     
     <ProjectReference Include="..\src\IdentityServer4.csproj" />
   </ItemGroup>
