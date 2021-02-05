@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="~/lib/jquery/dist/jquery.slim.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function getItems() {
+            let url = "http://8.135.26.124/api/app/questions/paged-list?maxResultCount=20&sorting=id"
+            fetch(url)
+                .then(r => {
+                    console.log(r);
+                });
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getItems()">getItems</button>
+</body>
+</html>
