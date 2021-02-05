@@ -43,7 +43,7 @@ namespace IdentityServerHost.Configuration
                         "http://192.168.1.4:44383/swagger/oauth2-redirect.html",
                         "https://localhost:44300/callback.html",
                         "https://localhost:44300/silent.html",
-                        "https://localhost:44300/popup.html"
+                        "http://localhost:44307"
                     },
 
                     PostLogoutRedirectUris = { "https://localhost:44300/index.html" },
