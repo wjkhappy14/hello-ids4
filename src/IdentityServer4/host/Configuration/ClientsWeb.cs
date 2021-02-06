@@ -41,13 +41,13 @@ namespace IdentityServerHost.Configuration
                     RedirectUris = 
                     {
                         "http://192.168.1.4:44383/swagger/oauth2-redirect.html",
-                        "https://localhost:44300/callback.html",
-                        "https://localhost:44300/silent.html",
+                        "http://localhost:44307/authentication/login-callback",
+                        "https://localhost:44300/signin-oidc",
                         "http://localhost:44307"
                     },
 
-                    PostLogoutRedirectUris = { "https://localhost:44300/index.html" },
-                    AllowedCorsOrigins = { "http://192.168.1.4:44383", "https://localhost:44383" },
+                    PostLogoutRedirectUris = { "https://localhost:44300/signout-callback-oidc" },
+                    AllowedCorsOrigins = { "http://192.168.1.4:44383", "https://localhost:44383","http://localhost:44307" },
 
                     AllowedScopes = allowedScopes
                 },
