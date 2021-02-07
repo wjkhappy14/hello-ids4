@@ -21,7 +21,7 @@
 
     <!-- strong naming fml -->
     <AssemblyOriginatorKeyFile>../../../key.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
