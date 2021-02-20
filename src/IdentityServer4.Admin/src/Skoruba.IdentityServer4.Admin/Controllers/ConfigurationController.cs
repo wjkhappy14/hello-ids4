@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -11,8 +11,8 @@ using Skoruba.IdentityServer4.Admin.ExceptionHandling;
 
 namespace Skoruba.IdentityServer4.Admin.Controllers
 {
-    [Authorize(Policy = AuthorizationConsts.AdministrationPolicy)]
-    [TypeFilter(typeof(ControllerExceptionFilterAttribute))]
+   // [Authorize(Policy = AuthorizationConsts.AdministrationPolicy)]
+   // [TypeFilter(typeof(ControllerExceptionFilterAttribute))]
     public class ConfigurationController : BaseController
     {
         private readonly IIdentityResourceService _identityResourceService;

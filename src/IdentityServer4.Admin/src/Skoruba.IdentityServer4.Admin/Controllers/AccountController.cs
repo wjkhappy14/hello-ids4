@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Skoruba.IdentityServer4.Admin.Configuration.Constants;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Skoruba.IdentityServer4.Admin.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class AccountController : BaseController
     {
         public AccountController(ILogger<ConfigurationController> logger) : base(logger)

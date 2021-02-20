@@ -28,11 +28,11 @@ namespace Skoruba.IdentityServer4.Admin
 
             try
             {
-                DockerHelpers.ApplyDockerConfiguration(configuration);
+               // DockerHelpers.ApplyDockerConfiguration(configuration);
 
                 var host = CreateHostBuilder(args).Build();
 
-                await ApplyDbMigrationsWithDataSeedAsync(args, configuration, host);
+               // await ApplyDbMigrationsWithDataSeedAsync(args, configuration, host);
 
                 host.Run();
             }

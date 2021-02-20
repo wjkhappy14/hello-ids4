@@ -1,27 +1,27 @@
 {
-    "iisSettings": {
-        "windowsAuthentication": false,
-        "anonymousAuthentication": true,
-        "iisExpress": {
-            "applicationUrl": "https://localhost:44303",
-            "sslPort": 44303
-        }
+  "iisSettings": {
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "https://localhost:44303",
+      "sslPort": 44303
     },
+    "windowsAuthentication": false
+  },
     "profiles": {
-        "IIS Express": {
-            "commandName": "IISExpress",
-            "launchBrowser": true,
-            "environmentVariables": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
-            }
+      "IIS Express": {
+        "commandName": "IISExpress",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
         },
-        "Skoruba.IdentityServer4.Admin": {
-            "commandName": "Project",
-            "launchBrowser": true,
-            "environmentVariables": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "applicationUrl": "https://localhost:44303"
-        }
+        "launchBrowser": true
+      },
+      "IdentityServer4.Admin": {
+        "applicationUrl": "https://0.0.0.0:44303",
+        "commandName": "Project",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "launchBrowser": true
+      }
     }
 }

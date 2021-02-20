@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
@@ -10,8 +10,8 @@ using Skoruba.IdentityServer4.Admin.ExceptionHandling;
 
 namespace Skoruba.IdentityServer4.Admin.Controllers
 {
-    [Authorize(Policy = AuthorizationConsts.AdministrationPolicy)]
-    [TypeFilter(typeof(ControllerExceptionFilterAttribute))]
+   // [Authorize(Policy = AuthorizationConsts.AdministrationPolicy)]
+    //[TypeFilter(typeof(ControllerExceptionFilterAttribute))]
     public class HomeController : BaseController
     {
         private readonly ILogger<ConfigurationController> _logger;
