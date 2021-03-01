@@ -207,14 +207,14 @@ namespace IdentityServerHost
                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
                     options.SignOutScheme = IdentityServerConstants.SignoutScheme;
 
-                    options.Authority = "https://demo.identityserver.io/";
-                    options.ClientId = "login";
+                    options.Authority = "http://106.13.130.51:8080";
+                    options.ClientId = "Awesome_Web";
                     options.ResponseType = "id_token";
                     options.SaveTokens = true;
                     options.CallbackPath = "/signin-idsrv";
                     options.SignedOutCallbackPath = "/signout-callback-idsrv";
                     options.RemoteSignOutPath = "/signout-idsrv";
-
+                    options.RequireHttpsMetadata = false;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         NameClaimType = "name",
