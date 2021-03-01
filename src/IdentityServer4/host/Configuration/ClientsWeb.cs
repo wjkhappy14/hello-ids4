@@ -9,7 +9,7 @@ namespace IdentityServerHost.Configuration
 {
     public static class ClientsWeb
     {
-        static string[] allowedScopes = 
+        static string[] allowedScopes =
         {
             IdentityServerConstants.StandardScopes.OpenId,
             IdentityServerConstants.StandardScopes.Profile,
@@ -19,7 +19,7 @@ namespace IdentityServerHost.Configuration
            // IdentityServerConstants.StandardScopes.OfflineAccess,
             "role",
             "Exam"
-        };      
+        };
 
 
         public static IEnumerable<Client> Get()
@@ -34,21 +34,26 @@ namespace IdentityServerHost.Configuration
                     ClientId = "Awesome_Web",
                     ClientName = "Awesome_Web",
                     ClientSecrets={ new Secret("1q2w3e") },
-                    ClientUri = "http://identityserver.io",
+                    ClientUri = "http://106.13.130.51:8080",
                     AllowedGrantTypes =GrantTypes.Code,// GrantTypes.ResourceOwnerPassword,
                     RequireClientSecret = false,
                     RequirePkce=false,
-                    RedirectUris = 
+                    RedirectUris =
                     {
                         "http://192.168.1.4:44383/swagger/oauth2-redirect.html",
                         "http://localhost:44307/authentication/login-callback",
                         "https://localhost:44300/signin-oidc",
-                        "http://localhost:44307"
+                        "http://localhost:44307",
+                        "http://106.13.130.51:8080/signin-idsrv"
                     },
 
                     PostLogoutRedirectUris = { "https://localhost:44300/signout-callback-oidc" },
-                    AllowedCorsOrigins = { "http://192.168.1.4:44383", "https://localhost:44383","http://localhost:44307" },
-
+                    AllowedCorsOrigins = {
+                        "http://192.168.1.4:44383",
+                        "https://localhost:44383",
+                        "http://localhost:44307",
+                        "http://106.13.130.51:8080"
+                    },
                     AllowedScopes = allowedScopes
                 },
                 
@@ -58,7 +63,7 @@ namespace IdentityServerHost.Configuration
                 new Client
                 {
                     ClientId = "mvc.tokenmanagement",
-                    
+
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())

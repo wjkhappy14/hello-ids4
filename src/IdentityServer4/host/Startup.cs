@@ -17,6 +17,7 @@ using IdentityServerHost.Extensions;
 using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.HttpOverrides;
 using IdentityServerHost.Quickstart.UI;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
 namespace IdentityServerHost
 {
@@ -209,7 +210,7 @@ namespace IdentityServerHost
 
                     options.Authority = "http://106.13.130.51:8080";
                     options.ClientId = "Awesome_Web";
-                    options.ResponseType = "id_token";
+                    options.ResponseType = OpenIdConnectResponseType.Code;
                     options.SaveTokens = true;
                     options.CallbackPath = "/signin-idsrv";
                     options.SignedOutCallbackPath = "/signout-callback-idsrv";
