@@ -42,6 +42,7 @@ namespace IdentityServer4.Endpoints
             _requestValidator = requestValidator;
             _responseGenerator = responseGenerator;
             _logger = logger;
+            _logger.LogInformation("激活 Endpoint [UserInfoEndpoint]");
         }
 
         /// <summary>

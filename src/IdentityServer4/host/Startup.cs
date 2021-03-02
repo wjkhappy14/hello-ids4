@@ -28,7 +28,6 @@ namespace IdentityServerHost
         public Startup(IConfiguration config)
         {
             _config = config;
-
             IdentityModelEventSource.ShowPII = true;
         }
         private void ConfigureCors(IServiceCollection services, IConfiguration configuration)

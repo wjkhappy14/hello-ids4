@@ -28,6 +28,7 @@ namespace IdentityServer4.Endpoints
            IUserSession userSession)
             : base(events, logger, options, validator, interactionGenerator, authorizeResponseGenerator, userSession)
         {
+            Logger.LogInformation("激活 Endpoint [AuthorizeEndpoint]");
         }
 
         public override async Task<IEndpointResult> ProcessAsync(HttpContext context)

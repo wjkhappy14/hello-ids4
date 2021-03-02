@@ -18,6 +18,7 @@ namespace IdentityServer4.Endpoints
         public CheckSessionEndpoint(ILogger<CheckSessionEndpoint> logger)
         {
             _logger = logger;
+            _logger.LogInformation("激活 Endpoint [CheckSessionEndpoint]");
         }
 
         public Task<IEndpointResult> ProcessAsync(HttpContext context)

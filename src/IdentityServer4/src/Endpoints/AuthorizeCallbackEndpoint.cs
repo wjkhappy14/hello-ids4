@@ -37,6 +37,7 @@ namespace IdentityServer4.Endpoints
         {
             _consentResponseStore = consentResponseStore;
             _authorizationParametersMessageStore = authorizationParametersMessageStore;
+            Logger.LogInformation("激活 Endpoint [AuthorizeCallbackEndpoint]");
         }
 
         public override async Task<IEndpointResult> ProcessAsync(HttpContext context)

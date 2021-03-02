@@ -49,6 +49,7 @@ namespace IdentityServer4.Endpoints
             _responseGenerator = responseGenerator;
             _events = events;
             _logger = logger;
+            _logger.LogInformation("激活 Endpoint [TokenEndpoint]");
         }
 
         /// <summary>

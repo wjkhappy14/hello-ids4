@@ -1,7 +1,3 @@
-// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
-// Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
-
-
 using IdentityModel;
 using IdentityServer4.Extensions;
 using IdentityServer4.Models;
@@ -62,11 +58,11 @@ namespace IdentityServer4.Validation
 
         public async Task<TokenValidationResult> ValidateIdentityTokenAsync(string token, string clientId = null, bool validateLifetime = true)
         {
-            _logger.LogDebug("Start identity token validation");
+            _logger.LogDebug($"Start identity token validation token={token} {Environment.NewLine} clientId={clientId}");
 
             if (token.Length > _options.InputLengthRestrictions.Jwt)
             {
-                _logger.LogError("JWT too long");
+                _logger.LogError($"JWT too long");
                 return Invalid(OidcConstants.ProtectedResourceErrors.InvalidToken);
             }
 
@@ -76,7 +72,7 @@ namespace IdentityServer4.Validation
 
                 if (clientId.IsMissing())
                 {
-                    _logger.LogError("No clientId supplied, can't find id in identity token.");
+                    _logger.LogError($"No clientId supplied, can't find id in identity token.");
                     return Invalid(OidcConstants.ProtectedResourceErrors.InvalidToken);
                 }
             }
@@ -87,12 +83,12 @@ namespace IdentityServer4.Validation
             var client = await _clients.FindEnabledClientByIdAsync(clientId);
             if (client == null)
             {
-                _logger.LogError("Unknown or disabled client: {clientId}.", clientId);
+                _logger.LogError($"Unknown or disabled client: {clientId}.", clientId);
                 return Invalid(OidcConstants.ProtectedResourceErrors.InvalidToken);
             }
 
             _log.ClientName = client.ClientName;
-            _logger.LogDebug("Client found: {clientId} / {clientName}", client.ClientId, client.ClientName);
+            _logger.LogDebug($"Client found: {client.ClientId} / { client.ClientName}");
 
             var keys = await _keys.GetValidationKeysAsync();
             var result = await ValidateJwtAsync(token, keys, audience: clientId, validateLifetime: validateLifetime);
@@ -101,16 +97,16 @@ namespace IdentityServer4.Validation
 
             if (result.IsError)
             {
-                LogError("Error validating JWT");
+                LogError($"Error validating JWT");
                 return result;
             }
 
-            _logger.LogDebug("Calling into custom token validator: {type}", _customValidator.GetType().FullName);
+            _logger.LogDebug($"Calling into custom token validator: {_customValidator.GetType().FullName}");
             var customResult = await _customValidator.ValidateIdentityTokenAsync(result);
 
             if (customResult.IsError)
             {
-                LogError("Custom validator failed: " + (customResult.Error ?? "unknown"));
+                LogError($"Custom validator failed: " + (customResult.Error ?? "unknown"));
                 return customResult;
             }
 
@@ -122,7 +118,7 @@ namespace IdentityServer4.Validation
 
         public async Task<TokenValidationResult> ValidateAccessTokenAsync(string token, string expectedScope = null)
         {
-            _logger.LogTrace("Start access token validation");
+            _logger.LogTrace("[ValidateAccessTokenAsync] Start access token validation");
 
             _log.ExpectedScope = expectedScope;
             _log.ValidateLifetime = true;
@@ -133,13 +129,13 @@ namespace IdentityServer4.Validation
             {
                 if (token.Length > _options.InputLengthRestrictions.Jwt)
                 {
-                    _logger.LogError("JWT too long");
+                    _logger.LogError($"JWT 太长,token长度不能超过:{ _options.InputLengthRestrictions.Jwt}");
 
                     return new TokenValidationResult
                     {
                         IsError = true,
                         Error = OidcConstants.ProtectedResourceErrors.InvalidToken,
-                        ErrorDescription = "Token too long"
+                        ErrorDescription = "Token 太长"
                     };
                 }
 
@@ -152,13 +148,13 @@ namespace IdentityServer4.Validation
             {
                 if (token.Length > _options.InputLengthRestrictions.TokenHandle)
                 {
-                    _logger.LogError("token handle too long");
+                    _logger.LogError($"token handle 太长");
 
                     return new TokenValidationResult
                     {
                         IsError = true,
                         Error = OidcConstants.ProtectedResourceErrors.InvalidToken,
-                        ErrorDescription = "Token too long"
+                        ErrorDescription = "Token  太长"
                     };
                 }
 
@@ -180,7 +176,7 @@ namespace IdentityServer4.Validation
                 var client = await _clients.FindEnabledClientByIdAsync(clientClaim.Value);
                 if (client == null)
                 {
-                    _logger.LogError("Client deleted or disabled: {clientId}", clientClaim.Value);
+                    _logger.LogError($"Client deleted or disabled: {clientClaim.Value}");
 
                     result.IsError = true;
                     result.Error = OidcConstants.ProtectedResourceErrors.InvalidToken;
@@ -194,7 +190,7 @@ namespace IdentityServer4.Validation
             var subClaim = result.Claims.FirstOrDefault(c => c.Type == JwtClaimTypes.Subject);
             if (subClaim != null)
             {
-                var principal = Principal.Create("tokenvalidator", result.Claims.ToArray());
+                var principal = Principal.Create($"tokenvalidator", result.Claims.ToArray());
 
                 if (result.ReferenceTokenId.IsPresent())
                 {
@@ -206,7 +202,7 @@ namespace IdentityServer4.Validation
 
                 if (isActiveCtx.IsActive == false)
                 {
-                    _logger.LogError("User marked as not active: {subject}", subClaim.Value);
+                    _logger.LogError($"User marked as not active: {subClaim.Value}");
 
                     result.IsError = true;
                     result.Error = OidcConstants.ProtectedResourceErrors.InvalidToken;
@@ -227,12 +223,12 @@ namespace IdentityServer4.Validation
                 }
             }
 
-            _logger.LogDebug("Calling into custom token validator: {type}", _customValidator.GetType().FullName);
+            _logger.LogDebug($"Calling into custom token validator: { _customValidator.GetType().FullName}");
             var customResult = await _customValidator.ValidateAccessTokenAsync(result);
 
             if (customResult.IsError)
             {
-                LogError("Custom validator failed: " + (customResult.Error ?? "unknown"));
+                LogError($"Custom validator failed: " + (customResult.Error ?? "unknown"));
                 return customResult;
             }
 
@@ -245,10 +241,11 @@ namespace IdentityServer4.Validation
 
         private async Task<TokenValidationResult> ValidateJwtAsync(string jwt, IEnumerable<SecurityKeyInfo> validationKeys, bool validateLifetime = true, string audience = null)
         {
-            var handler = new JwtSecurityTokenHandler();
+            _logger.LogInformation($"[ValidateJwtAsync] jwt={jwt} audience={audience}");
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
             handler.InboundClaimTypeMap.Clear();
 
-            var parameters = new TokenValidationParameters
+            TokenValidationParameters parameters = new TokenValidationParameters
             {
                 ValidIssuer = _context.HttpContext.GetIdentityServerIssuerUri(),
                 IssuerSigningKeys = validationKeys.Select(k => k.Key),
@@ -266,27 +263,27 @@ namespace IdentityServer4.Validation
 
             try
             {
-                var id = handler.ValidateToken(jwt, parameters, out var securityToken);
-                var jwtSecurityToken = securityToken as JwtSecurityToken;
+                ClaimsPrincipal id = handler.ValidateToken(jwt, parameters, out var securityToken);
+                JwtSecurityToken jwtSecurityToken = securityToken as JwtSecurityToken;
 
                 // if no audience is specified, we make at least sure that it is an access token
                 if (audience.IsMissing())
                 {
                     if (_options.AccessTokenJwtType.IsPresent())
                     {
-                        var type = jwtSecurityToken.Header.Typ;
+                        string type = jwtSecurityToken.Header.Typ;
                         if (!string.Equals(type, _options.AccessTokenJwtType))
                         {
                             return new TokenValidationResult
                             {
                                 IsError = true,
-                                Error = "invalid JWT token type"
+                                Error = $"{type}无效, JWT token type={_options.AccessTokenJwtType}"
                             };
                         }
 
                     }
                 }
-                
+
                 // if access token contains an ID, log it
                 var jwtId = id.FindFirst(JwtClaimTypes.JwtId);
                 if (jwtId != null)
@@ -307,7 +304,7 @@ namespace IdentityServer4.Validation
                 }
 
                 var claims = id.Claims.ToList();
-                
+
                 // check the scope format (array vs space delimited string)
                 var scopes = claims.Where(c => c.Type == JwtClaimTypes.Scope).ToArray();
                 if (scopes.Any())
@@ -317,7 +314,7 @@ namespace IdentityServer4.Validation
                         if (scope.Value.Contains(" "))
                         {
                             claims.Remove(scope);
-                            
+
                             var values = scope.Value.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                             foreach (var value in values)
                             {
@@ -351,7 +348,7 @@ namespace IdentityServer4.Validation
         private async Task<TokenValidationResult> ValidateReferenceAccessTokenAsync(string tokenHandle)
         {
             _log.TokenHandle = tokenHandle;
-            var token = await _referenceTokenStore.GetReferenceTokenAsync(tokenHandle);
+            Token token = await _referenceTokenStore.GetReferenceTokenAsync(tokenHandle);
 
             if (token == null)
             {
@@ -393,7 +390,7 @@ namespace IdentityServer4.Validation
 
         private IEnumerable<Claim> ReferenceTokenToClaims(Token token)
         {
-            var claims = new List<Claim>
+            List<Claim> claims = new List<Claim>
             {
                 new Claim(JwtClaimTypes.Issuer, token.Issuer),
                 new Claim(JwtClaimTypes.NotBefore, new DateTimeOffset(token.CreationTime).ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64),

@@ -1,0 +1,13 @@
+2021-03-02 13:36:50.139 +08:00 [INF] 启动 Host...
+2021-03-02 13:36:55.532 +08:00 [INF] Starting IdentityServer4 version 0.0.0-alpha.0.12+d33b7084c4e4b09008d2cc5a974b37a8893c195a
+2021-03-02 13:36:55.553 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2021-03-02 13:36:55.560 +08:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2021-03-02 13:36:55.562 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2021-03-02 13:36:55.562 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2021-03-02 13:36:55.563 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2021-03-02 13:36:55.563 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2021-03-02 13:36:55.563 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2021-03-02 13:36:55.895 +08:00 [INF] Now listening on: http://0.0.0.0:8080
+2021-03-02 13:36:55.906 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-02 13:36:55.911 +08:00 [INF] Hosting environment: Development
+2021-03-02 13:36:55.912 +08:00 [INF] Content root path: C:\Users\Administrator\source\repos\hello-ids4\src\IdentityServer4\host

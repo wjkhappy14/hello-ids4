@@ -29,6 +29,7 @@ namespace IdentityServer4.Endpoints
             _logger = logger;
             _options = options;
             _responseGenerator = responseGenerator;
+            _logger.LogInformation("激活 Endpoint [DiscoveryEndpoint]");
         }
 
         public async Task<IEndpointResult> ProcessAsync(HttpContext context)

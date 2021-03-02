@@ -30,6 +30,7 @@ namespace IdentityServer4.Endpoints
             _endSessionRequestValidator = endSessionRequestValidator;
             _userSession = userSession;
             _logger = logger;
+            _logger.LogInformation("激活 Endpoint [EndSessionEndpoint]");
         }
 
         public async Task<IEndpointResult> ProcessAsync(HttpContext context)
