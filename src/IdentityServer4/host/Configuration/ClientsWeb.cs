@@ -44,6 +44,7 @@ namespace IdentityServerHost.Configuration
                         "http://localhost:44307/authentication/login-callback",
                         "https://localhost:44300/signin-oidc",
                         "http://localhost:44307",
+                        "http://localhost:5000/signin-oidc",
                         "http://106.13.130.51:8080/signin-idsrv"
                     },
 
@@ -52,6 +53,7 @@ namespace IdentityServerHost.Configuration
                         "http://192.168.1.4:44383",
                         "https://localhost:44383",
                         "http://localhost:44307",
+                        "http://localhost:5000",
                         "http://106.13.130.51:8080"
                     },
                     AllowedScopes = allowedScopes

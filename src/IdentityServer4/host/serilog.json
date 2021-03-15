@@ -1,0 +1,71 @@
+{
+  "Serilog": {
+    "Enrich": [ "FromLogContext", "WithMachineName" ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning",
+        "System.Net.Http.HttpClient": "Warning"
+      }
+    },
+    "Properties": {
+      "Application": "LintSense.Exam"
+    },
+    "WriteTo": [
+      { "Name": "Console" },
+      {
+        "Args": {
+          "configureLogger": {
+            "Filter": [
+              {
+                "Args": {
+                  "expression": "(@Level = 'Error' or @Level = 'Fatal' or @Level = 'Warning')"
+                },
+                "Name": "ByIncludingOnly"
+              }
+            ],
+            "WriteTo": [
+              {
+                "Args": {
+                  "outputTemplate": "{Timestamp:o} [{Level:u3}] ({SourceContext}) {Message}{NewLine}{Exception}",
+                  "path": "Logs/Error/log_.log",
+                  "retainedFileCountLimit": 7,
+                  "rollingInterval": "Day"
+                },
+                "Name": "File"
+              }
+            ]
+          }
+        },
+        "Name": "Logger"
+      },
+      {
+        "Name": "Logger",
+        "Args": {
+          "configureLogger": {
+            "Filter": [
+              {
+                "Args": {
+                  "expression": "@Level = 'Information'"
+                },
+                "Name": "ByIncludingOnly"
+              }
+            ],
+            "WriteTo": [
+              {
+                "Name": "File",
+                "Args": {
+                  "outputTemplate": "{Timestamp:o} [{Level:u3}] ({SourceContext}) {Message}{NewLine}{Exception}",
+                  "path": "Logs/Info/log_.log",
+                  "retainedFileCountLimit": 7,
+                  "rollingInterval": "Day"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

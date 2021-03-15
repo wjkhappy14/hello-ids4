@@ -1,6 +1,7 @@
 //https://www.cnblogs.com/huaweiyun/p/14411834.html
 
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
@@ -29,7 +30,7 @@ namespace IdentityServerHost
                     fileSizeLimitBytes: 1_00_000,
                     rollOnFileSizeLimit: true,
                     shared: true,
-                    flushToDiskInterval: TimeSpan.FromSeconds(1)
+                    flushToDiskInterval: TimeSpan.FromHours(1)
                     )
                 .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}", theme: AnsiConsoleTheme.Literate)
                 .CreateLogger();
@@ -53,7 +54,17 @@ namespace IdentityServerHost
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseSerilog()
+                 .ConfigureAppConfiguration(config =>
+                 {
+                     config.AddJsonFile("./serilog.json", false, true);
+                     config.AddEnvironmentVariables();
+                 })
+                .UseSerilog((hostingContext, loggerConfig) =>
+                {
+                    IConfiguration config = hostingContext.Configuration;
+                    IConfigurationSection serilogSection = config.GetSection("Serilog");
+                    loggerConfig.ReadFrom.Configuration(config, "Serilog");
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
