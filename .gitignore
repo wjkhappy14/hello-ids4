@@ -205,6 +205,7 @@ tools/
 
 # IdentityServer temp files
 identityserver4_log.txt
+./host/IdentityServer4.txt
 tempkey.rsa
 samples/KeyManagement/FileSystem/dataprotectionkeys/
 samples/KeyManagement/FileSystem/signingkeys/
