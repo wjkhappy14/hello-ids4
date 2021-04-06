@@ -35,7 +35,7 @@ namespace IdentityServerHost.Configuration
                     ClientName = "Awesome_Web",
                     ClientSecrets={ new Secret("1q2w3e") },
                     ClientUri = "http://106.13.130.51:8080",
-                    AllowedGrantTypes =GrantTypes.Code,// GrantTypes.ResourceOwnerPassword,
+                    AllowedGrantTypes =GrantTypes.ResourceOwnerPassword,//GrantTypes.Code,
                     RequireClientSecret = false,
                     RequirePkce=false,
                     RedirectUris =
