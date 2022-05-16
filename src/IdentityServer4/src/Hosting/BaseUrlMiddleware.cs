@@ -28,7 +28,7 @@ namespace IdentityServer4.Hosting
             auditLog.Url = context.Request.Path;
             auditLog.CorrelationId = context.Connection.Id;
             auditLog.HttpMethod = context.Request.Method;
-            await HttpContextLogHandler.LogAsync(auditLog);
+           // await HttpContextLogHandler.LogAsync(auditLog);
             await _next(context);
         }
     }

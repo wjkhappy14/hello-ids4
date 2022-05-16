@@ -33,10 +33,19 @@ namespace IdentityServerHost.Configuration
                 //////////////////////////////////////////
                 new Client
                 {
-                    ClientId = "parameterized.client",
+                    ClientId = "Blogging",
+                    ClientName="Blogging-API",
+                    RequireClientSecret=false,
+                    AllowOfflineAccess=false,
+                    RequireConsent=true,
+                    RequirePkce=false,
+                    PostLogoutRedirectUris={ "/swagger/"},
+                    AllowAccessTokensViaBrowser=true,
+                    RequireRequestObject=false,
                     ClientSecrets = { new Secret("secret".Sha256()) },
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = { "transaction" }
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowedScopes ={ "blogging"},
+                    RedirectUris={ "https://localhost:40017/swagger/oauth2-redirect.html" }
                 },
 
                 ///////////////////////////////////////////
@@ -113,7 +122,7 @@ namespace IdentityServerHost.Configuration
                         "resource1.scope1",
                         "resource2.scope1"
                     },
-                    
+
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,
                     AbsoluteRefreshTokenLifetime = 3600 * 24,
                     SlidingRefreshTokenLifetime = 10,
@@ -206,6 +215,7 @@ namespace IdentityServerHost.Configuration
                     AllowedGrantTypes = GrantTypes.DeviceFlow,
                     RequireClientSecret = false,
                     AllowOfflineAccess = true,
+                    AllowAccessTokensViaBrowser = true,
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

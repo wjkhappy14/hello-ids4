@@ -168,9 +168,7 @@ namespace IdentityServerHost
                 KeyId = CryptoRandom.CreateUniqueId(16, CryptoRandom.OutputFormat.Hex)
             };
 
-            return builder.AddSigningCredential(
-                key,
-                IdentityServerConstants.ECDsaSigningAlgorithm.ES256);
+            return builder.AddSigningCredential( key,IdentityServerConstants.ECDsaSigningAlgorithm.ES256);
         }
 
         // use this for persisted grants store
