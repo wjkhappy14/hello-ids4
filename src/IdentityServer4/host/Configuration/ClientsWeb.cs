@@ -33,7 +33,7 @@ namespace IdentityServerHost.Configuration
                 {
                     ClientId = "Awesome_Web",
                     ClientName = "Awesome_Web",
-                    ClientSecrets={ new Secret("1q2w3e") },
+                    ClientSecrets={ new Secret("1q2w3e*") },
                     ClientUri = "http://106.13.130.51:8080",
                     AllowedGrantTypes =GrantTypes.ResourceOwnerPassword,//GrantTypes.Code,
                     RequireClientSecret = false,
@@ -52,7 +52,7 @@ namespace IdentityServerHost.Configuration
                     AllowedCorsOrigins = {
                         "http://192.168.1.4:9527",
                         "https://localhost:44383",
-                        "http://localhost:44307",
+                        "http://localhost:9527",
                         "http://localhost:5000",
                         "http://106.13.130.51:8080"
                     },
