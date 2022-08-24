@@ -45,7 +45,7 @@ namespace IdentityServerHost.Configuration
                     ClientSecrets = { new Secret("secret".Sha256()) },
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowedScopes ={ "blogging"},
-                    RedirectUris={ "https://localhost:40017/swagger/oauth2-redirect.html" }
+                    RedirectUris={ "http://localhost:5424/swagger/oauth2-redirect.html" }
                 },
 
                 ///////////////////////////////////////////

@@ -29,12 +29,13 @@ namespace IdentityServerHost.Quickstart.UI
                 {
                     new TestUser
                     {
-                        SubjectId = "Abp.VNext.Hello.Com",
+                        SubjectId = "3a05d6c3-00c9-7891-4636-36ba4891c774",
                         Username = "8888@Abp.VNext.Hello.com",
                         Password = "8888@Abp.VNext.Hello.com",
                         Claims =
                         {
                             new Claim(JwtClaimTypes.Name, "Hello Abp"),
+                            new Claim(JwtClaimTypes.Role, "admin"),
                             new Claim(JwtClaimTypes.GivenName, "ABP"),
                             new Claim(JwtClaimTypes.FamilyName, "Hello"),
                             new Claim(JwtClaimTypes.Email, "hello@abp.com"),
