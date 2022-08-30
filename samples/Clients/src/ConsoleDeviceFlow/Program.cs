@@ -1,4 +1,4 @@
-﻿using Clients;
+using Clients;
 using IdentityModel;
 using IdentityModel.Client;
 using Newtonsoft.Json.Linq;
@@ -36,7 +36,7 @@ namespace ConsoleDeviceFlow
             var response = await client.RequestDeviceAuthorizationAsync(new DeviceAuthorizationRequest
             {
                 Address = disco.DeviceAuthorizationEndpoint,
-                ClientId = "device"
+                ClientId = "device",
             });
 
             if (response.IsError) throw new Exception(response.Error);

@@ -1,4 +1,4 @@
-﻿using Clients;
+using Clients;
 using IdentityModel.Client;
 using Newtonsoft.Json.Linq;
 using System;
@@ -23,7 +23,8 @@ namespace ConsoleResourceOwnerFlow
         static async Task<TokenResponse> RequestTokenAsync()
         {
             var client = new HttpClient();
-
+          
+            
             var disco = await client.GetDiscoveryDocumentAsync(Constants.Authority);
             if (disco.IsError) throw new Exception(disco.Error);
 
