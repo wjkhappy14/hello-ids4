@@ -40,8 +40,8 @@ namespace ConsoleClientCredentialsFlow
             {
                 Address = disco.TokenEndpoint,
 
-                ClientId = "client",
-                ClientSecret = "secret",
+                ClientId = "Awesome_Web",
+                ClientSecret = "1q2w3e*",
             });
 
             if (response.IsError) throw new Exception(response.Error);

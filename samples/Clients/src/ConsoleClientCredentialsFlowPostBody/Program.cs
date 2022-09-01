@@ -1,4 +1,4 @@
-﻿using Clients;
+using Clients;
 using IdentityModel.Client;
 using Newtonsoft.Json.Linq;
 using System;
@@ -32,7 +32,7 @@ namespace ConsoleClientCredentialsFlow
                 Address = disco.TokenEndpoint,
                 ClientCredentialStyle = ClientCredentialStyle.PostBody,
 
-                ClientId = "client",
+                ClientId = "Awesome_Web",
                 ClientSecret = "secret",
                 Scope = "resource1.scope1"
             });
