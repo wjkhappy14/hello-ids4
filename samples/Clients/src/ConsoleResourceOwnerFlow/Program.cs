@@ -1,4 +1,4 @@
-﻿using Clients;
+using Clients;
 using IdentityModel.Client;
 using Newtonsoft.Json.Linq;
 using System;
@@ -24,20 +24,28 @@ namespace ConsoleResourceOwnerFlow
         {
             var client = new HttpClient();
 
-            var disco = await client.GetDiscoveryDocumentAsync(Constants.Authority);
+            DiscoveryDocumentRequest documentRequest = new DiscoveryDocumentRequest();
+            documentRequest.Address = Constants.Authority;
+            documentRequest.Policy = new DiscoveryPolicy()
+            {
+                RequireHttps = false,
+                ValidateIssuerName = false,
+                ValidateEndpoints = false
+            };
+            var disco = await client.GetDiscoveryDocumentAsync(documentRequest);
             if (disco.IsError) throw new Exception(disco.Error);
 
             var response = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disco.TokenEndpoint,
 
-                ClientId = "roclient",
-                ClientSecret = "secret",
+                ClientId = "Awesome_Web",
+                ClientSecret = "1q2w3e*",
 
-                UserName = "bob",
-                Password = "bob",
+                UserName = "8888@Abp.VNext.Hello.com",
+                Password = "8888@Abp.VNext.Hello.com",
 
-                Scope = "resource1.scope1 resource2.scope1",
+                Scope = "profile role",
 
                 Parameters =
                 {

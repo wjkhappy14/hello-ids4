@@ -77,7 +77,8 @@ namespace IdentityServerHost
                 .AddInMemoryIdentityResources(Resources.IdentityResources)
                 .AddInMemoryApiScopes(Resources.ApiScopes)
                 .AddInMemoryApiResources(Resources.ApiResources)
-                .AddSigningCredential()
+                .AddDeveloperSigningCredential()
+               // .AddSigningCredential()
                 .AddExtensionGrantValidator<ExtensionGrantValidator>()
                 .AddExtensionGrantValidator<NoSubjectExtensionGrantValidator>()
                 .AddJwtBearerClientAuthentication()
@@ -168,9 +169,7 @@ namespace IdentityServerHost
                 KeyId = CryptoRandom.CreateUniqueId(16, CryptoRandom.OutputFormat.Hex)
             };
 
-            return builder.AddSigningCredential(
-                key,
-                IdentityServerConstants.ECDsaSigningAlgorithm.ES256);
+            return builder.AddSigningCredential( key,IdentityServerConstants.ECDsaSigningAlgorithm.ES256);
         }
 
         // use this for persisted grants store

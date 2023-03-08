@@ -1,5 +1,3 @@
-// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
-// Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
 using IdentityServer4.Extensions;
@@ -25,9 +23,12 @@ namespace IdentityServer4.Hosting
         public async Task Invoke(HttpContext context)
         {
             var request = context.Request;
-            
             context.SetIdentityServerBasePath(request.PathBase.Value.RemoveTrailingSlash());
-
+            AuditLog auditLog = new AuditLog();
+            auditLog.Url = context.Request.Path;
+            auditLog.CorrelationId = context.Connection.Id;
+            auditLog.HttpMethod = context.Request.Method;
+           // await HttpContextLogHandler.LogAsync(auditLog);
             await _next(context);
         }
     }

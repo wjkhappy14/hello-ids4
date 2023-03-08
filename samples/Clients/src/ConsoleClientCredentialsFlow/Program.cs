@@ -1,4 +1,4 @@
-﻿using Clients;
+using Clients;
 using IdentityModel.Client;
 using Newtonsoft.Json.Linq;
 using System;
@@ -24,15 +24,24 @@ namespace ConsoleClientCredentialsFlow
         {
             var client = new HttpClient();
 
-            var disco = await client.GetDiscoveryDocumentAsync(Constants.Authority);
+            DiscoveryDocumentRequest documentRequest = new DiscoveryDocumentRequest();
+            documentRequest.Address = Constants.Authority;
+            documentRequest.Policy = new DiscoveryPolicy()
+            {
+                RequireHttps = false,
+                ValidateIssuerName = false,
+                ValidateEndpoints = false
+            };
+
+            var disco = await client.GetDiscoveryDocumentAsync(documentRequest);
             if (disco.IsError) throw new Exception(disco.Error);
 
             var response = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
             {
                 Address = disco.TokenEndpoint,
 
-                ClientId = "client",
-                ClientSecret = "secret",
+                ClientId = "Awesome_Web",
+                ClientSecret = "1q2w3e*",
             });
 
             if (response.IsError) throw new Exception(response.Error);

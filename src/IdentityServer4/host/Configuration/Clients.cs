@@ -11,7 +11,7 @@ namespace IdentityServerHost.Configuration
     {
         public static IEnumerable<Client> Get()
         {
-            var clients = new List<Client>();
+            List<Client> clients = new List<Client>();
 
             clients.AddRange(ClientsConsole.Get());
             clients.AddRange(ClientsWeb.Get());
