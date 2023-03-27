@@ -77,8 +77,8 @@ namespace IdentityServerHost
                 .AddInMemoryIdentityResources(Resources.IdentityResources)
                 .AddInMemoryApiScopes(Resources.ApiScopes)
                 .AddInMemoryApiResources(Resources.ApiResources)
-                .AddDeveloperSigningCredential()
-               // .AddSigningCredential()
+                .AddDeveloperSigningCredential()//配置 IdentityServer4 签名用秘钥
+                                                // .AddSigningCredential()
                 .AddExtensionGrantValidator<ExtensionGrantValidator>()
                 .AddExtensionGrantValidator<NoSubjectExtensionGrantValidator>()
                 .AddJwtBearerClientAuthentication()
@@ -169,7 +169,7 @@ namespace IdentityServerHost
                 KeyId = CryptoRandom.CreateUniqueId(16, CryptoRandom.OutputFormat.Hex)
             };
 
-            return builder.AddSigningCredential( key,IdentityServerConstants.ECDsaSigningAlgorithm.ES256);
+            return builder.AddSigningCredential(key, IdentityServerConstants.ECDsaSigningAlgorithm.ES256);
         }
 
         // use this for persisted grants store

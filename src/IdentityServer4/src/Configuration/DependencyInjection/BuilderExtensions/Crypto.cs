@@ -152,7 +152,8 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Sets the temporary signing credential.
+        /// 配置 IdentityServer4 签名用秘钥 Sets the temporary signing credential.
+        /// 在生成环境中，应该使用OpenSSL生成一个证书，公钥、私钥存于证书. 补充：证书还会有个证书密码
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <param name="persistKey">Specifies if the temporary key should be persisted to disk.</param>
@@ -167,7 +168,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             if (filename == null)
             {
-                filename = Path.Combine(Directory.GetCurrentDirectory(), "tempkey.jwk");
+                filename = Path.Combine(Directory.GetCurrentDirectory(), "tempkey.jwk");//生成 tempkey.jwk，其中有公钥、私钥
             }
 
             if (File.Exists(filename))
@@ -179,8 +180,8 @@ namespace Microsoft.Extensions.DependencyInjection
             }
             else
             {
-                var key = CryptoHelper.CreateRsaSecurityKey();
-                var jwk = JsonWebKeyConverter.ConvertFromRSASecurityKey(key);
+                RsaSecurityKey key = CryptoHelper.CreateRsaSecurityKey();// kid即为Key ID，用于防止重放攻击
+                JsonWebKey jwk = JsonWebKeyConverter.ConvertFromRSASecurityKey(key);
                 jwk.Alg = signingAlgorithm.ToString();
 
                 if (persistKey)

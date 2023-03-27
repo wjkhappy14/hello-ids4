@@ -37,6 +37,10 @@ namespace IdentityServer.IntegrationTests.Common
 
         public const string DeviceAuthorization = BaseUrl + "/connect/deviceauthorization";
         public const string DiscoveryEndpoint = BaseUrl + "/.well-known/openid-configuration";
+
+        /// <summary>
+        /// 资源服务器向ids4公钥接口获取公钥，资源服务器再利用公钥解密签名，若解密成功，并且与header.payload一致，则成功【未篡改】
+        /// </summary>
         public const string DiscoveryKeysEndpoint = BaseUrl + "/.well-known/openid-configuration/jwks";
         public const string AuthorizeEndpoint = BaseUrl + "/connect/authorize";
         public const string TokenEndpoint = BaseUrl + "/connect/token";
