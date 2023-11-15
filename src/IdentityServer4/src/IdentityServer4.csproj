@@ -49,10 +49,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
     <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <PackageReference Include="IdentityModel" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\IdentityModel\src\IdentityModel.csproj" />
+  
     <ProjectReference Include="..\..\Storage\src\IdentityServer4.Storage.csproj" />
   </ItemGroup>
 </Project>
